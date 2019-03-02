@@ -67,8 +67,11 @@ public struct ValidationRuleRequired<T>: ValidationRule {
      true if non-nil.
      
      */
-    public func validate(input: T?) -> Bool {        
-        return input != nil
+  public func validate(input: T?) -> Bool {
+    if let input = input as? String {
+      return input.count > 0
     }
+    return input != nil
+  }
     
 }
