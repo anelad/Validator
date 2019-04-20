@@ -51,6 +51,13 @@
 			remoteGlobalIDString = 9967E3A21B76822E00ACAF54;
 			remoteInfo = Validator;
 		};
+		A1E59BB3226B4B7400346A08 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9967E41C1B768E9500ACAF54 /* Validator.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1BB7618222AB4E90087E3B1;
+			remoteInfo = "Validator macOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -152,6 +159,7 @@
 				9967E4221B768E9500ACAF54 /* Validator.framework */,
 				9967E4241B768E9500ACAF54 /* ValidatorTests.xctest */,
 				994E7FAD207BF69500DB8578 /* Validator.framework */,
+				A1E59BB4226B4B7400346A08 /* Validator_macOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -209,7 +217,7 @@
 		999F538F1B4E736900143184 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = adamjwaite.co.uk;
 				TargetAttributes = {
 					999F53961B4E736900143184 = {
@@ -221,7 +229,7 @@
 			};
 			buildConfigurationList = 999F53921B4E736900143184 /* Build configuration list for PBXProject "Example" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -263,6 +271,13 @@
 			fileType = wrapper.cfbundle;
 			path = ValidatorTests.xctest;
 			remoteRef = 9967E4231B768E9500ACAF54 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A1E59BB4226B4B7400346A08 /* Validator_macOS.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Validator_macOS.framework;
+			remoteRef = A1E59BB3226B4B7400346A08 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -330,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -386,6 +402,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

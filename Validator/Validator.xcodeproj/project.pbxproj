@@ -70,6 +70,7 @@
 		99C457EF1C183DB40058EC4D /* ValidationRulePaymentCardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C457EE1C183DB40058EC4D /* ValidationRulePaymentCardTests.swift */; };
 		99C4581D1C184AE00058EC4D /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C4581C1C184AE00058EC4D /* TestHelpers.swift */; };
 		99C458221C18587F0058EC4D /* ValidationRuleContainsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C458211C18587F0058EC4D /* ValidationRuleContainsTests.swift */; };
+		A1BB761C222AB4E90087E3B1 /* Validator_macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = A1BB761A222AB4E90087E3B1 /* Validator_macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,9 @@
 		99C457EE1C183DB40058EC4D /* ValidationRulePaymentCardTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRulePaymentCardTests.swift; sourceTree = "<group>"; };
 		99C4581C1C184AE00058EC4D /* TestHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		99C458211C18587F0058EC4D /* ValidationRuleContainsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValidationRuleContainsTests.swift; sourceTree = "<group>"; };
+		A1BB7618222AB4E90087E3B1 /* Validator_macOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Validator_macOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1BB761A222AB4E90087E3B1 /* Validator_macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Validator_macOS.h; sourceTree = "<group>"; };
+		A1BB761B222AB4E90087E3B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +155,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9967E3AE1B76822E00ACAF54 /* Validator.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1BB7615222AB4E90087E3B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +237,7 @@
 				9967E3A51B76822E00ACAF54 /* Validator */,
 				17B70F5B1F7B0CF900FD1CF9 /* Validator tvOS */,
 				9967E3B11B76822E00ACAF54 /* ValidatorTests */,
+				A1BB7619222AB4E90087E3B1 /* Validator macOS */,
 				9967E3A41B76822E00ACAF54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -236,6 +248,7 @@
 				9967E3A31B76822E00ACAF54 /* Validator.framework */,
 				9967E3AD1B76822E00ACAF54 /* ValidatorTests.xctest */,
 				17B70F5A1F7B0CF900FD1CF9 /* Validator.framework */,
+				A1BB7618222AB4E90087E3B1 /* Validator_macOS.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -305,6 +318,15 @@
 			path = Validator;
 			sourceTree = "<group>";
 		};
+		A1BB7619222AB4E90087E3B1 /* Validator macOS */ = {
+			isa = PBXGroup;
+			children = (
+				A1BB761A222AB4E90087E3B1 /* Validator_macOS.h */,
+				A1BB761B222AB4E90087E3B1 /* Info.plist */,
+			);
+			path = "Validator macOS";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -321,6 +343,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9967E3A71B76822E00ACAF54 /* Validator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1BB7613222AB4E90087E3B1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1BB761C222AB4E90087E3B1 /* Validator_macOS.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +411,24 @@
 			productReference = 9967E3AD1B76822E00ACAF54 /* ValidatorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A1BB7617222AB4E90087E3B1 /* Validator macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1BB761F222AB4E90087E3B1 /* Build configuration list for PBXNativeTarget "Validator macOS" */;
+			buildPhases = (
+				A1BB7613222AB4E90087E3B1 /* Headers */,
+				A1BB7614222AB4E90087E3B1 /* Sources */,
+				A1BB7615222AB4E90087E3B1 /* Frameworks */,
+				A1BB7616222AB4E90087E3B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Validator macOS";
+			productName = "Validator macOS";
+			productReference = A1BB7618222AB4E90087E3B1 /* Validator_macOS.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -388,7 +436,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = adamjwaite.co.uk;
 				TargetAttributes = {
 					17B70F591F7B0CF900FD1CF9 = {
@@ -398,21 +446,27 @@
 					};
 					9967E3A21B76822E00ACAF54 = {
 						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 					};
 					9967E3AC1B76822E00ACAF54 = {
 						CreatedOnToolsVersion = 7.0;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Manual;
+					};
+					A1BB7617222AB4E90087E3B1 = {
+						CreatedOnToolsVersion = 10.1;
+						DevelopmentTeam = Q4LMKGYTMD;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 9967E39D1B76822E00ACAF54 /* Build configuration list for PBXProject "Validator" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 9967E3991B76822E00ACAF54;
 			productRefGroup = 9967E3A41B76822E00ACAF54 /* Products */;
@@ -422,6 +476,7 @@
 				9967E3A21B76822E00ACAF54 /* Validator */,
 				9967E3AC1B76822E00ACAF54 /* ValidatorTests */,
 				17B70F591F7B0CF900FD1CF9 /* Validator tvOS */,
+				A1BB7617222AB4E90087E3B1 /* Validator macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -442,6 +497,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9967E3AB1B76822E00ACAF54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1BB7616222AB4E90087E3B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -529,6 +591,13 @@
 				995B7A141B7BF8C500FB2AB7 /* ValidationRuleRequiredTests.swift in Sources */,
 				9967E3F91B7682C700ACAF54 /* ValidationRuleComparisonTests.swift in Sources */,
 				9967E3FE1B7682C700ACAF54 /* UISlider+ValidatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1BB7614222AB4E90087E3B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,6 +805,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -756,6 +826,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -770,6 +841,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = adamjwaite.co.uk.ValidatorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -785,6 +857,74 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A1BB761D222AB4E90087E3B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Q4LMKGYTMD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Validator macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.avorna.Validator-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		A1BB761E222AB4E90087E3B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = Q4LMKGYTMD;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Validator macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.avorna.Validator-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -823,6 +963,15 @@
 			buildConfigurations = (
 				9967E3BB1B76822E00ACAF54 /* Debug */,
 				9967E3BC1B76822E00ACAF54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1BB761F222AB4E90087E3B1 /* Build configuration list for PBXNativeTarget "Validator macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1BB761D222AB4E90087E3B1 /* Debug */,
+				A1BB761E222AB4E90087E3B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

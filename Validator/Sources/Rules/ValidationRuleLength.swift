@@ -55,7 +55,7 @@ public struct ValidationRuleLength: ValidationRule {
     public var error: Error
     
     /**
-     
+      
      The minimum character count an input must have (default 0).
      
      */
